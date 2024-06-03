@@ -36,7 +36,7 @@ export const AddTodoForm: FC<Props> = ({ onAdd }) => {
 					onClick={handleAdd}
 					className={styles.addButton}
 				>
-					<Plus /> 追加
+					<Plus aria-label="追加" /> 追加
 				</div>
 			</div>
 		</div>
