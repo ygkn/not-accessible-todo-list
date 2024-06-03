@@ -27,7 +27,7 @@ export const AddTodoForm: FC<Props> = ({ onAdd }) => {
 					type="text"
 					value={text}
 					onChange={(e) => setText(e.target.value)}
-					placeholder="ToDo の内容を入力"
+					placeholder="牛乳を買う。もし卵があれば、6つ買う。"
 					className={styles.input}
 				/>
 				<div onClick={handleAdd} className={styles.addButton}>
