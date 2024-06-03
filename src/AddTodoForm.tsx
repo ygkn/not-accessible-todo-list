@@ -24,13 +24,18 @@ export const AddTodoForm: FC<Props> = ({ onAdd }) => {
 		<div>
 			<div className={styles.inputs}>
 				<input
+					data-testid="input"
 					type="text"
 					value={text}
 					onChange={(e) => setText(e.target.value)}
 					placeholder="牛乳を買う。もし卵があれば、6つ買う。"
 					className={styles.input}
 				/>
-				<div onClick={handleAdd} className={styles.addButton}>
+				<div
+					data-testid="add-button"
+					onClick={handleAdd}
+					className={styles.addButton}
+				>
 					<Plus /> 追加
 				</div>
 			</div>
