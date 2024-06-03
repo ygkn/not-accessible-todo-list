@@ -38,6 +38,10 @@
   place-items: center;
 }
 
+.addButton:hover {
+  opacity: 0.2;
+}
+
 
 @keyframes buttonBackground {
   from {

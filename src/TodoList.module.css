@@ -16,3 +16,12 @@
 .todo + .todo {
   border-top: 1px solid #ddd;
 }
+
+.deleteButton {
+  color: red;
+}
+
+.deleteButton:hover {
+  opacity: 0.5;
+}
+

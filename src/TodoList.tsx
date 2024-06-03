@@ -35,7 +35,10 @@ export const TodoList: FC<{
 					>
 						{todo.text}
 					</span>
-					<button onClick={() => onDelete(todo.id)}>
+					<button
+						onClick={() => onDelete(todo.id)}
+						className={styles.deleteButton}
+					>
 						<Trash2 size={16} />
 					</button>
 				</div>
