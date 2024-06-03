@@ -6,9 +6,11 @@ export const Footer: FC = () => {
 	return (
 		<div>
 			<div>
+				{/* @ts-expect-error */}
 				<marquee scrollamount="20" behavior="alternate">
 					<div>今日もがんばろう</div>
 					<img src={TodoImage} width="50" height="50" />
+					{/* @ts-expect-error */}
 				</marquee>
 			</div>
 			<div>
