@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Trash2 } from "lucide-react";
+import { Trash2, Square, SquareCheckBig } from "lucide-react";
 
 import styles from "./TodoList.module.css";
 
@@ -9,9 +9,9 @@ export const TodoList: FC<{
 		text: string;
 		isDone: boolean;
 	}[];
-	onDone: (id: number) => void;
+	onDoneChange: (id: number) => void;
 	onDelete: (id: number) => void;
-}> = ({ todoList, onDone, onDelete }) => {
+}> = ({ todoList, onDoneChange, onDelete }) => {
 	if (todoList.length === 0) {
 		return (
 			<div className={styles.emptyMessage}>
@@ -25,11 +25,16 @@ export const TodoList: FC<{
 		<div>
 			{todoList.map((todo) => (
 				<div key={todo.id} className={styles.todo}>
-					<input
-						type="checkbox"
-						checked={todo.isDone}
-						onChange={() => onDone(todo.id)}
-					/>
+					{todo.isDone ? (
+						<SquareCheckBig
+							onClick={() => onDoneChange(todo.id)}
+							size={16}
+							className={styles.done}
+						/>
+					) : (
+						<Square onClick={() => onDoneChange(todo.id)} size={16} />
+					)}
+
 					<span
 						style={{ textDecoration: todo.isDone ? "line-through" : "none" }}
 					>

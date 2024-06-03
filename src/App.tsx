@@ -36,7 +36,7 @@ export const App: FC = () => {
 			/>
 			<TodoList
 				todoList={todoList}
-				onDone={(id) => {
+				onDoneChange={(id) => {
 					setTodoList(
 						todoList.map((todo) =>
 							todo.id === id ? { ...todo, isDone: !todo.isDone } : todo,
