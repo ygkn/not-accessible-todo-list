@@ -1,0 +1,10 @@
+.appWrapper {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+
+
